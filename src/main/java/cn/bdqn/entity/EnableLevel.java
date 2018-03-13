@@ -1,28 +1,28 @@
 package cn.bdqn.entity;
 
-public class ExamLevel {
-    /*
-    *
-    *
-         试题级别：examLevel
-        1）id
-        2）name
-        3）级别：level
+/**
+ * Created by Shinelon on 2018/3/13.
+ */
 
-    *
-    * */
-    private int id,level,order;
-    private String name,info,namecode;
+//1）	ID
+//        2）	级别： level  （int）
+//        3）name：  level  （String）
+//
+//
+
+public class EnableLevel {
+   private int id,level,order;
+  private   String code,name,info;
 
     @Override
     public String toString ( ) {
-        return "ExamLevel{" +
+        return "EnableLevel{" +
                 "id=" + id +
                 ", level=" + level +
                 ", order=" + order +
+                ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
-                ", namecode='" + namecode + '\'' +
                 '}';
     }
 
@@ -50,6 +50,14 @@ public class ExamLevel {
         this.order = order;
     }
 
+    public String getCode ( ) {
+        return code;
+    }
+
+    public void setCode ( String code ) {
+        this.code = code;
+    }
+
     public String getName ( ) {
         return name;
     }
@@ -65,13 +73,4 @@ public class ExamLevel {
     public void setInfo ( String info ) {
         this.info = info;
     }
-
-    public String getNamecode ( ) {
-        return namecode;
-    }
-
-    public void setNamecode ( String namecode ) {
-        this.namecode = namecode;
-    }
 }
-

@@ -1,8 +1,6 @@
 package cn.bdqn.entity;
 
-/**
- * Created by samsung on 2018/3/13.
- */
+
 public class Department {
     /*
     *1）ID
@@ -17,72 +15,112 @@ public class Department {
     10）是否启用    int  enable
     *
     * */
-    private int id , fatherId , enable;
-    private String shortname ,fullname , Level ,address,info,remarks;
+    private int id,Level,fatherId,enableLevelId;
+    private String  departmentCode,shortname,fullname,address,info,Remarks;
+    private EnableLevel enableLevel;
 
-    public Department() {
+    @Override
+    public String toString ( ) {
+        return "Department{" +
+                "id=" + id +
+                ", Level=" + Level +
+                ", fatherId=" + fatherId +
+                ", enableLevelId=" + enableLevelId +
+                ", departmentCode='" + departmentCode + '\'' +
+                ", shortname='" + shortname + '\'' +
+                ", fullname='" + fullname + '\'' +
+                ", address='" + address + '\'' +
+                ", info='" + info + '\'' +
+                ", Remarks='" + Remarks + '\'' +
+                ", enableLevel=" + enableLevel +
+                '}';
     }
 
-    public Department(int id, int fatherId, int enable, String shortname, String fullname, String level, String address, String info, String remarks) {
-        this.id = id;
-        this.fatherId = fatherId;
-        this.enable = enable;
-        this.shortname = shortname;
-        this.fullname = fullname;
-        Level = level;
-        this.address = address;
-        this.info = info;
-        this.remarks = remarks;
-    }
-
-    public int getId() {
+    public int getId ( ) {
         return id;
     }
 
-    public int getFatherId() {
-        return fatherId;
+    public void setId ( int id ) {
+        this.id = id;
     }
 
-    public int getEnable() {
-        return enable;
-    }
-
-    public String getShortname() {
-        return shortname;
-    }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public String getLevel() {
+    public int getLevel ( ) {
         return Level;
     }
 
-    public String getAddress() {
+    public void setLevel ( int level ) {
+        Level = level;
+    }
+
+    public int getFatherId ( ) {
+        return fatherId;
+    }
+
+    public void setFatherId ( int fatherId ) {
+        this.fatherId = fatherId;
+    }
+
+    public int getEnableLevelId ( ) {
+        return enableLevelId;
+    }
+
+    public void setEnableLevelId ( int enableLevelId ) {
+        this.enableLevelId = enableLevelId;
+    }
+
+    public String getDepartmentCode ( ) {
+        return departmentCode;
+    }
+
+    public void setDepartmentCode ( String departmentCode ) {
+        this.departmentCode = departmentCode;
+    }
+
+    public String getShortname ( ) {
+        return shortname;
+    }
+
+    public void setShortname ( String shortname ) {
+        this.shortname = shortname;
+    }
+
+    public String getFullname ( ) {
+        return fullname;
+    }
+
+    public void setFullname ( String fullname ) {
+        this.fullname = fullname;
+    }
+
+    public String getAddress ( ) {
         return address;
     }
 
-    public String getInfo() {
+    public void setAddress ( String address ) {
+        this.address = address;
+    }
+
+    public String getInfo ( ) {
         return info;
     }
 
-    public String getRemarks() {
-        return remarks;
+    public void setInfo ( String info ) {
+        this.info = info;
     }
 
-    @Override
-    public String toString() {
-        return "Department{" +
-                "id=" + id +
-                ", fatherId=" + fatherId +
-                ", enable=" + enable +
-                ", shortname='" + shortname + '\'' +
-                ", fullname='" + fullname + '\'' +
-                ", Level='" + Level + '\'' +
-                ", address='" + address + '\'' +
-                ", info='" + info + '\'' +
-                ", remarks='" + remarks + '\'' +
-                '}';
+    public String getRemarks ( ) {
+        return Remarks;
+    }
+
+    public void setRemarks ( String remarks ) {
+        Remarks = remarks;
+    }
+
+    public EnableLevel getEnableLevel ( ) {
+        return enableLevel;
+    }
+
+    public void setEnableLevel ( EnableLevel enableLevel ) {
+        this.enableLevel = enableLevel;
     }
 }

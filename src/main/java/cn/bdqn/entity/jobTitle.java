@@ -8,80 +8,95 @@ package cn.bdqn.entity;
  * Created by Administrator on 2018/3/13.
  */
 public class jobTitle {
-    private  int jobTitle,departmentID,enable;
-
-    public jobTitle(int jobTitle, int departmentID, int enable, String name, String info, String remarks) {
-        this.jobTitle = jobTitle;
-        this.departmentID = departmentID;
-        this.enable = enable;
-        this.name = name;
-        this.info = info;
-        this.remarks = remarks;
-    }
-
-    public int getJobTitle() {
-
-        return jobTitle;
-    }
-
-    public void setJobTitle(int jobTitle) {
-        this.jobTitle = jobTitle;
-    }
-
-    public int getDepartmentID() {
-        return departmentID;
-    }
-
-    public void setDepartmentID(int departmentID) {
-        this.departmentID = departmentID;
-    }
-
-    public int getEnable() {
-        return enable;
-    }
-
-    public void setEnable(int enable) {
-        this.enable = enable;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
-
-    private  String name,info,remarks;
+    private int id,departmentId,enableLevleId;
+    private String jobTitleCode,Name,info,Remarks;
+    private EnableLevel enableLevel;
+    private Department department;
 
     @Override
-    public String toString() {
+    public String toString ( ) {
         return "jobTitle{" +
-                "jobTitle=" + jobTitle +
-                ", departmentID=" + departmentID +
-                ", enable=" + enable +
-                ", name='" + name + '\'' +
+                "id=" + id +
+                ", departmentId=" + departmentId +
+                ", enableLevleId=" + enableLevleId +
+                ", jobTitleCode='" + jobTitleCode + '\'' +
+                ", Name='" + Name + '\'' +
                 ", info='" + info + '\'' +
-                ", remarks='" + remarks + '\'' +
+                ", Remarks='" + Remarks + '\'' +
+                ", enableLevel=" + enableLevel +
+                ", department=" + department +
                 '}';
     }
 
-    public jobTitle() {
+    public int getId ( ) {
+        return id;
+    }
+
+    public void setId ( int id ) {
+        this.id = id;
+    }
+
+    public int getDepartmentId ( ) {
+        return departmentId;
+    }
+
+    public void setDepartmentId ( int departmentId ) {
+        this.departmentId = departmentId;
+    }
+
+    public int getEnableLevleId ( ) {
+        return enableLevleId;
+    }
+
+    public void setEnableLevleId ( int enableLevleId ) {
+        this.enableLevleId = enableLevleId;
+    }
+
+    public String getJobTitleCode ( ) {
+        return jobTitleCode;
+    }
+
+    public void setJobTitleCode ( String jobTitleCode ) {
+        this.jobTitleCode = jobTitleCode;
+    }
+
+    public String getName ( ) {
+        return Name;
+    }
+
+    public void setName ( String name ) {
+        Name = name;
+    }
+
+    public String getInfo ( ) {
+        return info;
+    }
+
+    public void setInfo ( String info ) {
+        this.info = info;
+    }
+
+    public String getRemarks ( ) {
+        return Remarks;
+    }
+
+    public void setRemarks ( String remarks ) {
+        Remarks = remarks;
+    }
+
+    public EnableLevel getEnableLevel ( ) {
+        return enableLevel;
+    }
+
+    public void setEnableLevel ( EnableLevel enableLevel ) {
+        this.enableLevel = enableLevel;
+    }
+
+    public Department getDepartment ( ) {
+        return department;
+    }
+
+    public void setDepartment ( Department department ) {
+        this.department = department;
     }
 }

@@ -1,8 +1,5 @@
 package cn.bdqn.entity;
 
-/**
- * Created by samsung on 2018/3/13.
- */
 public class TUser {
     /*
     * 1）ID
@@ -16,60 +13,98 @@ public class TUser {
 8）部门表（也算组织结构表）department
 
 */
-    private int id  , departmentid , PHONE ;
-    private String name , password , userrole , department ;
+   private int id,userroleId,departmentId;
+   private Long phone;
+   private String   userCode,name,password;
+   private Userrole userrole;
+   private Department department;
 
-    public TUser() {
+    @Override
+    public String toString ( ) {
+        return "TUser{" +
+                "id=" + id +
+                ", userroleId=" + userroleId +
+                ", departmentId=" + departmentId +
+                ", phone=" + phone +
+                ", userCode='" + userCode + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", userrole=" + userrole +
+                ", department=" + department +
+                '}';
     }
 
-    public TUser(int id, int departmentid, int PHONE, String name, String password, String userrole, String department) {
-        this.id = id;
-        this.departmentid = departmentid;
-        this.PHONE = PHONE;
-        this.name = name;
-        this.password = password;
-        this.userrole = userrole;
-        this.department = department;
-    }
-
-    public int getId() {
+    public int getId ( ) {
         return id;
     }
 
-    public int getDepartmentid() {
-        return departmentid;
+    public void setId ( int id ) {
+        this.id = id;
     }
 
-    public int getPHONE() {
-        return PHONE;
+    public int getUserroleId ( ) {
+        return userroleId;
     }
 
-    public String getName() {
+    public void setUserroleId ( int userroleId ) {
+        this.userroleId = userroleId;
+    }
+
+    public int getDepartmentId ( ) {
+        return departmentId;
+    }
+
+    public void setDepartmentId ( int departmentId ) {
+        this.departmentId = departmentId;
+    }
+
+    public Long getPhone ( ) {
+        return phone;
+    }
+
+    public void setPhone ( Long phone ) {
+        this.phone = phone;
+    }
+
+    public String getUserCode ( ) {
+        return userCode;
+    }
+
+    public void setUserCode ( String userCode ) {
+        this.userCode = userCode;
+    }
+
+    public String getName ( ) {
         return name;
     }
 
-    public String getPassword() {
+    public void setName ( String name ) {
+        this.name = name;
+    }
+
+    public String getPassword ( ) {
         return password;
     }
 
-    public String getUserrole() {
+    public void setPassword ( String password ) {
+        this.password = password;
+    }
+
+    public Userrole getUserrole ( ) {
         return userrole;
     }
 
-    public String getDepartment() {
+    public void setUserrole ( Userrole userrole ) {
+        this.userrole = userrole;
+    }
+
+    public Department getDepartment ( ) {
         return department;
     }
 
-    @Override
-    public String toString() {
-        return "TUser{" +
-                "id=" + id +
-                ", departmentid=" + departmentid +
-                ", PHONE=" + PHONE +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", userrole='" + userrole + '\'' +
-                ", department='" + department + '\'' +
-                '}';
+    public void setDepartment ( Department department ) {
+        this.department = department;
     }
+
+//qqqqqqqqq
 }

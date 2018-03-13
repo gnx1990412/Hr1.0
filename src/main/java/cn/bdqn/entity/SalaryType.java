@@ -1,8 +1,6 @@
 package cn.bdqn.entity;
 
-/**
- * Created by samsung on 2018/3/13.
- */
+
 public class SalaryType {
     /*
     *
@@ -15,79 +13,78 @@ public class SalaryType {
             6）启用级别：enableLEvel
     * */
 
-    private int id ,order , enableLEvel;
-    private String salaryCode ,name , info ;
+    private int id,order,enableLevleId;
+    private String salary ,name,info;
 
-    public SalaryType() {
-    }
-
-    public SalaryType(int id, int order, int enableLEvel, String salaryCode, String name, String info) {
-        this.id = id;
-        this.order = order;
-        this.enableLEvel = enableLEvel;
-        this.salaryCode = salaryCode;
-        this.name = name;
-        this.info = info;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getOrder() {
-        return order;
-    }
-
-    public void setOrder(int order) {
-        this.order = order;
-    }
-
-    public int getEnableLEvel() {
-        return enableLEvel;
-    }
-
-    public void setEnableLEvel(int enableLEvel) {
-        this.enableLEvel = enableLEvel;
-    }
-
-    public String getSalaryCode() {
-        return salaryCode;
-    }
-
-    public void setSalaryCode(String salaryCode) {
-        this.salaryCode = salaryCode;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
+    private  EnableLevel enableLevel;
 
     @Override
-    public String toString() {
+    public String toString ( ) {
         return "SalaryType{" +
                 "id=" + id +
                 ", order=" + order +
-                ", enableLEvel=" + enableLEvel +
-                ", salaryCode='" + salaryCode + '\'' +
+                ", enableLevleId=" + enableLevleId +
+                ", salary='" + salary + '\'' +
                 ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
+                ", enableLevel=" + enableLevel +
                 '}';
     }
-};
+
+    public int getId ( ) {
+        return id;
+    }
+
+    public void setId ( int id ) {
+        this.id = id;
+    }
+
+    public int getOrder ( ) {
+        return order;
+    }
+
+    public void setOrder ( int order ) {
+        this.order = order;
+    }
+
+    public int getEnableLevleId ( ) {
+        return enableLevleId;
+    }
+
+    public void setEnableLevleId ( int enableLevleId ) {
+        this.enableLevleId = enableLevleId;
+    }
+
+    public String getSalary ( ) {
+        return salary;
+    }
+
+    public void setSalary ( String salary ) {
+        this.salary = salary;
+    }
+
+    public String getName ( ) {
+        return name;
+    }
+
+    public void setName ( String name ) {
+        this.name = name;
+    }
+
+    public String getInfo ( ) {
+        return info;
+    }
+
+    public void setInfo ( String info ) {
+        this.info = info;
+    }
+
+    public EnableLevel getEnableLevel ( ) {
+        return enableLevel;
+    }
+
+    public void setEnableLevel ( EnableLevel enableLevel ) {
+        this.enableLevel = enableLevel;
+    }
+}
 
