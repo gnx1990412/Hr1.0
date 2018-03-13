@@ -15,89 +15,104 @@ package cn.bdqn.entity;
  8）备注：Remarks
  */
 public class Job {
-    private  int id,enable,jobTypeId,departmentId;
-    private  String jobCode,info, remarks;
-
-    public Job() {
-    }
+   private int id,jobTypeID,departmentID,enableLevle;
+    private String Jobcode,name,info,Remarks;
+    private JobType jobType;
+    private  Department department;
 
     @Override
-    public String toString() {
+    public String toString ( ) {
         return "Job{" +
                 "id=" + id +
-                ", enable=" + enable +
-                ", jobTypeId=" + jobTypeId +
-                ", departmentId=" + departmentId +
-                ", jobCode='" + jobCode + '\'' +
+                ", jobTypeID=" + jobTypeID +
+                ", departmentID=" + departmentID +
+                ", enableLevle=" + enableLevle +
+                ", Jobcode='" + Jobcode + '\'' +
+                ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
-                ", remarks='" + remarks + '\'' +
+                ", Remarks='" + Remarks + '\'' +
+                ", jobType=" + jobType +
+                ", department=" + department +
                 '}';
     }
 
-    public Job(int id, int enable, int jobTypeId, int departmentId, String jobCode, String info, String remarks) {
-        this.id = id;
-        this.enable = enable;
-        this.jobTypeId = jobTypeId;
-        this.departmentId = departmentId;
-        this.jobCode = jobCode;
-        this.info = info;
-        remarks = remarks;
-    }
-
-    public int getId() {
-
+    public int getId ( ) {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId ( int id ) {
         this.id = id;
     }
 
-    public int getEnable() {
-        return enable;
+    public int getJobTypeID ( ) {
+        return jobTypeID;
     }
 
-    public void setEnable(int enable) {
-        this.enable = enable;
+    public void setJobTypeID ( int jobTypeID ) {
+        this.jobTypeID = jobTypeID;
     }
 
-    public int getJobTypeId() {
-        return jobTypeId;
+    public int getDepartmentID ( ) {
+        return departmentID;
     }
 
-    public void setJobTypeId(int jobTypeId) {
-        this.jobTypeId = jobTypeId;
+    public void setDepartmentID ( int departmentID ) {
+        this.departmentID = departmentID;
     }
 
-    public int getDepartmentId() {
-        return departmentId;
+    public int getEnableLevle ( ) {
+        return enableLevle;
     }
 
-    public void setDepartmentId(int departmentId) {
-        this.departmentId = departmentId;
+    public void setEnableLevle ( int enableLevle ) {
+        this.enableLevle = enableLevle;
     }
 
-    public String getJobCode() {
-        return jobCode;
+    public String getJobcode ( ) {
+        return Jobcode;
     }
 
-    public void setJobCode(String jobCode) {
-        this.jobCode = jobCode;
+    public void setJobcode ( String jobcode ) {
+        Jobcode = jobcode;
     }
 
-    public String getInfo() {
+    public String getName ( ) {
+        return name;
+    }
+
+    public void setName ( String name ) {
+        this.name = name;
+    }
+
+    public String getInfo ( ) {
         return info;
     }
 
-    public void setInfo(String info) {
+    public void setInfo ( String info ) {
         this.info = info;
     }
 
-    public String getRemarks() {
-        return remarks;
+    public String getRemarks ( ) {
+        return Remarks;
     }
 
-    public void setRemarks(String remarks) {
-        remarks = remarks;
+    public void setRemarks ( String remarks ) {
+        Remarks = remarks;
+    }
+
+    public JobType getJobType ( ) {
+        return jobType;
+    }
+
+    public void setJobType ( JobType jobType ) {
+        this.jobType = jobType;
+    }
+
+    public Department getDepartment ( ) {
+        return department;
+    }
+
+    public void setDepartment ( Department department ) {
+        this.department = department;
     }
 }

@@ -1,8 +1,5 @@
 package cn.bdqn.entity;
 
-/**
- * Created by samsung on 2018/3/13.
- */
 public class ExamLevel {
     /*
     *
@@ -14,49 +11,67 @@ public class ExamLevel {
 
     *
     * */
-    private int id , level ;
-    private String name;
-
-    public ExamLevel() {
-    }
-
-    public ExamLevel(int id, int level, String name) {
-        this.id = id;
-        this.level = level;
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private int id,level,order;
+    private String name,info,namecode;
 
     @Override
-    public String toString() {
+    public String toString ( ) {
         return "ExamLevel{" +
                 "id=" + id +
                 ", level=" + level +
+                ", order=" + order +
                 ", name='" + name + '\'' +
+                ", info='" + info + '\'' +
+                ", namecode='" + namecode + '\'' +
                 '}';
+    }
+
+    public int getId ( ) {
+        return id;
+    }
+
+    public void setId ( int id ) {
+        this.id = id;
+    }
+
+    public int getLevel ( ) {
+        return level;
+    }
+
+    public void setLevel ( int level ) {
+        this.level = level;
+    }
+
+    public int getOrder ( ) {
+        return order;
+    }
+
+    public void setOrder ( int order ) {
+        this.order = order;
+    }
+
+    public String getName ( ) {
+        return name;
+    }
+
+    public void setName ( String name ) {
+        this.name = name;
+    }
+
+    public String getInfo ( ) {
+        return info;
+    }
+
+    public void setInfo ( String info ) {
+        this.info = info;
+    }
+
+    public String getNamecode ( ) {
+        return namecode;
+    }
+
+    public void setNamecode ( String namecode ) {
+        this.namecode = namecode;
     }
 }
 
